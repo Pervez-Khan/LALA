@@ -1,15 +1,11 @@
 package Flipkart;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 
 public class FlipkartProductOrder extends FlipcKartProductSearch {
@@ -42,9 +38,7 @@ public class FlipkartProductOrder extends FlipcKartProductSearch {
 	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  driver.findElement(By.xpath("//button[@class='_2KpZ6l _2U9uOA _3v1-ww']")).click();
 	  Thread.sleep(1000);
-	  TakesScreenshot srcShot = ((TakesScreenshot)driver);
-		File srcFiles = srcShot.getScreenshotAs(OutputType.FILE);
-		File DestFile = new File("C:\\Parvez\\myworkspace\\SeptMavenProject");
-		FileUtils.copyFile(srcFiles,DestFile);
+	  TakeScreenShot("ProductOrdered");
+	 
   }
 }
