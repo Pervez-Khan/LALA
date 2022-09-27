@@ -37,7 +37,7 @@ public class BaseClass {
   @AfterSuite
   public void windowClose() {
 	  
-	  //driver.quit();
+	  driver.quit();
 	  System.out.println("Task Performed");
   }
 
